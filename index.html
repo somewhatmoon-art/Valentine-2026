@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Be My Valentine?</title>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -92,16 +92,15 @@
       50% { transform: translateY(-50px) scale(1.2); opacity: 0.3; }
       100% { transform: translateY(-100px) scale(0.8); opacity: 0; }
     }
-
   </style>
 </head>
 <body>
 
   <div class="card">
-    <h1>Would you be my Valentine?</h1>
-    <p>This is a huge threat, say no and see what happens</p>
-    <button id="yes">Yes</button>
-    <button id="no">No</button>
+    <h1>💖 Will you be my Valentine?</h1>
+    <p>I promise snacks, laughs, and good vibes.</p>
+    <button id="yes">Yes 💕</button>
+    <button id="no">No 🙃</button>
   </div>
 
   <script>
@@ -111,7 +110,7 @@
 
     // Make the "No" button dodge
     noBtn.addEventListener('mouseover', () => {
-      const x = Math.random() * 180 - 90;
+      const x = Math.random() * 180 - 90; // between -90 and 90
       const y = Math.random() * 180 - 90;
       noBtn.style.transform = `translate(${x}px, ${y}px)`;
     });
@@ -119,9 +118,9 @@
     // On clicking "Yes", show personalized message and floating outlines
     yesBtn.addEventListener('click', () => {
       body.innerHTML = `
-        <div style="text-align:center; font-family: 'Patrick Hand', cursive; color:#c83a5a;">
-          <h1>I'm so glad!</h1>
-          <p>You've made this day extra special.</p>
+        <div style="text-align:center; font-family: 'Patrick Hand', cursive; color:#c83a5a; margin-top: 20vh;">
+          <h1> you know ball </h1>
+          <p>Y you won't regret this trust me </p>
         </div>
       `;
 
@@ -129,8 +128,9 @@
         const heart = document.createElement('div');
         heart.className = 'heart-outline';
         heart.style.left = Math.random() * window.innerWidth + 'px';
-        heart.style.width = 15 + Math.random() * 25 + 'px';
-        heart.style.height = heart.style.width;
+        const size = 15 + Math.random() * 25;
+        heart.style.width = size + 'px';
+        heart.style.height = size + 'px';
         heart.style.animationDuration = 3 + Math.random() * 3 + 's';
         body.appendChild(heart);
       }
